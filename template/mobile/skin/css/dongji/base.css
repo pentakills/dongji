@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family:Microsoft YaHei;
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font-size:0.75rem ;
+    color: #666;
+    background: #fff;
+    font-family:Microsoft YaHei;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 75rem;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+
+/*header头*/
+.top{
+    width: 100%;
+    height: 2.375rem;
+    background-color: #f8f7f5;
+}
+
+.top-text{
+    float: left;
+    line-height: 2.375rem;
+}
+.top-text a{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+
+}
+.languages{
+    float: right;
+    line-height: 2.375rem;
+}
+.languages a{
+    margin-right: 1.25rem;
+}
+.tit{
+    height: 6.25rem;
+    width: 75rem;
+    margin: 0 auto;
+
+} 
+
+.logos{
+    float: left;
+    line-height: 6.25rem;
+
+}
+.logos img  {
+    width: 40.5rem;
+    height: 3.375rem;
+}
+.tit form{
+    float: right;
+    line-height: 6.25rem;
+}
+.tit form .p{
+    border: 1px #e4e4e4 solid;
+    width: 18.75rem;
+    height: 2.875rem;
+    text-indent: 0.375rem;
+    font-size: 0.875rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+
+}
+.tit form .t{
+    background-image: url("../../img/dongji/search.jpg");
+    width: 3.5rem;
+    height: 3.125rem;
+    margin-left: -0.25rem;
+    z-index: 1000;
+}
+.nav{
+    width: 100%;
+    height: 3.375rem;
+    background-color: #f8f7f5;
+}
+.nav ul li{
+    position: relative;
+    z-index: 999;
+    float: left;
+    border-right: 0.125rem #dbdbdb solid;
+    width: 9.75rem;
+    height: 3.375rem;
+    text-align: center;
+    transition: background-color .5s;
+}
+
+
+.nav ul li .dropdown{
+    background-color: #fff;
+    display: none;
+}
+.nav  li .dropdown a{
+   display: block;
+  font-size: 1rem;
+    font-weight: 400;
+    color: #282828;
+}
+
+.nav  li .dropdown a:hover{
+   background-color:#f8f7f5 ;
+
+}
+
+.nav li:hover .dropdown{
+    display: block;
+}
+.nav li a{
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #282828;
+    line-height: 3.375rem;
+}
+
+.nav li:last-child{
+    border-right: none;
+}
+
+.nav li:hover:not(.active){
+    background-color: #ddd;
+}
+.nav .active{
+    background-color: #0472b1;
+}
+.nav .active a{
+    color: #f8f7f5;
+}
+

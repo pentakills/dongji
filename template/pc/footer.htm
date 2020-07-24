@@ -1,0 +1,55 @@
+<!--新闻动态end-->
+<div class="clearfix"></div>
+<!--footer start-->
+<div class="footer">
+  <div class="w">
+    <div class="contact">
+      <ul>
+        <li>{eyou:global name="web_attr_8"}</li>
+        <li> {eyou:global name="web_attr_1"}</li>
+        <li>  {eyou:global name="web_attr_6"}</li>
+        <li>  {eyou:global name="web_attr_5"}</li>
+        <li> {eyou:global name="web_attr_7"}</li>
+        <li> {$global.web_copyright|htmlspecialchars_decode}--SEO技术支持：<a href="http://www.0917bjms.com/" style="color: #fff;">麦思科技</a> &nbsp;&nbsp;{eyou:global name='web_recordnum' /}
+</li>
+      </ul>
+    </div>
+    <div class="wx">
+      <img src="  {eyou:global name='web_attr_4' /}" alt=""/>
+    </div>
+  </div>
+
+</div>
+
+{eyou:static file="skin/js/colorful.js" /}
+  {eyou:static file="skin/js/quickbar.js" /} 
+  <script>$(document).ready(function() { var b_name = navigator.appName; var b_version = navigator.appVersion;var version = b_version.split(";");if(version[1]){var trim_version = version[1].replace(/[ ]/g, "");if (b_name == "Microsoft Internet Explorer") { if (trim_version == "MSIE7.0" || trim_version == "MSIE6.0"|| trim_version == "MSIE8.0") {$("body").append('<div class="banbendi" style="width:100%;height:30px;background:#FFFF99;text-align:center;line-height:30px;color:#666666;position:absolute;top:0;left:0;" onClick="hid()">您的浏览器版本过低，会影响网页浏览，请使用更高版本的浏览器</div>');}}}});function hid(){$(".banbendi").css("display","none");}</script> 
+  <!-- 应用插件标签 start --> 
+  {eyou:weapp type='default' /} 
+  <!-- 应用插件标签 end -->
+ <div id='cs_box'>
+  	<span class='cs_title'>{eyou:lang name='zxzx' /}</span>
+  	<span class='cs_close'>x</span>
+  	<div class='cs_img'></div>
+  	<span class='cs_info'>{eyou:lang name='ysmkybdn' /}</span>
+  	<div class='cs_btn'>{eyou:lang name='djzx' /}</div>
+  </div>
+  <style>
+  	#cs_box {width:120px; height:220px; background:#1692d6; position:fixed; right:10px; top:500px; border-radius:10px; z-index:1000}
+  	#cs_box span {color:#fff; height:20px; line-height:20px; font-family:'Arial'; display:block;}
+  	.cs_close {position:absolute; right:10px; top:10px; cursor:pointer; font-size:12px;}
+  	.cs_title {font-size:14px; margin:10px; font-weight:bold;}
+  	.cs_img {width:100px; height:100px; background:#fff; margin:10px;}
+  	.cs_info {font-size:12px; margin:0px 10px; overflow:hidden; text-align:center;}
+  	.cs_btn {width:100px; height:25px; border: 1px solid #ccc; margin:5px 10px; border-radius:5px; font-size:12px; line-height:25px; color:#fff; text-align:center; cursor:pointer;}
+  	.cs_btn:hover{background: #fff;color: #1692d6;}
+  </style>
+  {eyou:static file="skin/js/kf.js" /}
+  <script type="text/javascript">
+  	myEvent(window,'load',function(){
+  		cs_box.set({
+  			img_path : '/template/pc/skin/img/kf.jpg',		//设置图片路径
+  			qq : '2223280566',		//设置QQ号码
+  		});
+  	});
+  </script>

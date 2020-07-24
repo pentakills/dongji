@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+s:643:"D:\phpStudy\PHPTutorial\WWW\dongji/data/runtime/cache\6a\c6fc042b4c949bf23ef1ded4de8320.php,D:\phpStudy\PHPTutorial\WWW\dongji/data/runtime/cache\92\55b3b64424b86d54489a1124907a4a.php,D:\phpStudy\PHPTutorial\WWW\dongji/data/runtime/cache\fb\792b58da536317c84475cfc0f8d637.php,D:\phpStudy\PHPTutorial\WWW\dongji/data/runtime/cache\01\d3e0f93eaf5a16ef7834aa8484e811.php,D:\phpStudy\PHPTutorial\WWW\dongji/data/runtime/cache\54\1883dbda825862888c85fe78be5179.php,D:\phpStudy\PHPTutorial\WWW\dongji/data/runtime/cache\bb\1de070f5af95853575672640c795da.php,D:\phpStudy\PHPTutorial\WWW\dongji/data/runtime/cache\2d\65bab500c4e45451c88888653390da.php";

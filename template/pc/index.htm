@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="x-ua-compatible" content="ie=Edge,Chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+<title>{eyou:global name='web_title' /}</title>
+<meta name="description" content="{eyou:global name='web_description' /}" />
+<meta name="keywords" content="{eyou:global name='web_keywords' /}" />
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+{eyou:static file="skin/css/bootstrap.min.css" /}
+{eyou:static file="skin/css/common.css" /}
+{eyou:static file="skin/css/animate.css" /}
+{eyou:static file="skin/css/css.css" /}
+{eyou:static file="skin/css/media.css" /}
+{eyou:static file="skin/css/foot.css" /}
+{eyou:static file="skin/js/jquery-1.11.3.js" /}
+{eyou:static file="skin/js/slick.min.js" /}
+{eyou:static file="skin/js/common.js" /}
+{eyou:static file="skin/js/wow.min.js" /}
+{eyou:static file="skin/css/dongji/base.css" /}
+{eyou:static file="skin/css/dongji/index.css" /}
+{eyou:static file="skin/css/dongji/swiper.min.css" /}
+
+
+{eyou:static file="skin/js/dongji/swiper.min.js" /}
+{eyou:static file="skin/js/dongji/jquery1.42.min.js" /}
+{eyou:static file="skin/js/dongji/jquery.SuperSlide.2.1.3.js" /}
+
+<!--[if lt IE 9]>
+    {eyou:static file="skin/js/html5shiv.min.js" /}
+    {eyou:static file="skin/js/respond.min.js" /}
+    {eyou:static file="skin/js/selectivizr-min.js" /}
+  <![endif]-->
+
+</head>
+<body>
+<div id="over" style="display: hidden;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #f5f5f5;opacity:1.0;z-index: 1000;"></div>
+<div id="layout" style="display: hidden;position: absolute;top: 40%;left: 40%;width: 20%;height: 20%;z-index: 1001;text-align:center;"><img src="{eyou:global name='web_templets_pc' /}/skin/img/load.gif" alt="" /></div>
+{eyou:static file="skin/js/loading.js" /}
+<div id="wrap_top">
+<div id="wrap_index">
+  <!-- 头部header--> 
+  {eyou:include file="header.htm" /}
+   {eyou:include file="nav.htm" /}
+  <!-- 内容-->
+
+    <!--关于我们start-->
+    <div class="about">
+        <div class="about-tit"><b>关于我们</b><span>ABOUT US</span></div>
+        <div class="w">
+            {eyou:channelartlist typeid='1'}
+            <div class="desc">
+                <div class="desc-tit">{eyou:global name='web_name' /}</div>
+                <div class="desc-content">
+                    {eyou:type typeid='6' addtable='single_content'}{$field.content|html_msubstr=###,0,130}...{/eyou:type}
+                </div>
+                <a href="{eyou:field name='typeurl' /}"> <img src="template/pc/skin/img/dongji/dj_03.png" alt="" /></a>
+            </div>
+            <div class="tp">
+                <img src="{eyou:adv pid='3' row='1'}{$field.litpic}{/eyou:adv}" alt='{$field.title}' />
+            </div>
+            {/eyou:channelartlist}
+        </div>
+    </div>
+    <!--关于我们end-->
+
+    <!-- 產品展示start-->
+
+    <div class="slideGroup">
+        <div class="pro-tit"><b>产品中心</b><span>PRODUCTS</span></div>
+        <div class="parHd">
+            <span>钨</span>
+            <b>TUNGSTEN</b>
+            <ul>
+                {eyou:channelartlist typeid='10'}
+                {eyou:channel type="son" row='3'}
+
+                <li><img src="{$field.litpic}" alt=""/>
+                    <div class="cl{$i}">{$field.typename}</div>
+                </li>
+                {/eyou:channel}
+                {/eyou:channelartlist}
+
+            </ul>
+        </div>
+        <div class="parBd">
+
+            <div class="slideBox">
+                <ul>
+                    {eyou:arclist typeid='17' limit='0,4' titlelen='30' infolen='160' orderby='add_time'}
+
+                    <li>
+                        <div class="pic"><a href="{$field.arcurl}" target="_blank"><img src="{$field.litpic}"/></a></div>
+                        <div class="title"><a href="{$field.arcurl}" target="_blank"><b>{$field.title}</b><br/><span>{eyou:lang name='guige' /}：{eyou:field aid='$field.aid' addfields='guige' /}</span></a></div>
+                    </li>
+                    {/eyou:arclist}
+
+
+                </ul>
+
+            </div>
+            <!-- slideBox End -->
+
+            <div class="slideBox">
+
+                <ul>
+                    {eyou:arclist typeid='18' limit='0,4' titlelen='30' infolen='160' orderby='add_time'}
+
+                    <li>
+                        <div class="pic"><a href="{$field.arcurl}" target="_blank"><img src="{$field.litpic}"/></a></div>
+                        <div class="title"><a href="{$field.arcurl}" target="_blank"><b>{$field.title}</b><br/><span>{eyou:lang name='guige' /}：{eyou:field aid='$field.aid' addfields='guige' /}</span></a></div>
+                    </li>
+                    {/eyou:arclist}
+
+                </ul>
+
+            </div>
+            <!-- slideBox End -->
+
+            <div class="slideBox">
+
+                <ul>
+                    {eyou:arclist typeid='19' limit='0,4' titlelen='30' infolen='160' orderby='add_time'}
+
+                    <li>
+                        <div class="pic"><a href="{$field.arcurl}" target="_blank"><img src="{$field.litpic}"/></a></div>
+                        <div class="title"><a href="{$field.arcurl}" target="_blank"><b>{$field.title}</b><br/><span>{eyou:lang name='guige' /}：{eyou:field aid='$field.aid' addfields='guige' /}</span></a></div>
+                    </li>
+                    {/eyou:arclist}
+                </ul>
+
+            </div>
+            <!-- slideBox End -->
+
+        </div>
+        <!-- parBd End -->
+    </div>
+
+    <div class="slideGroup2">
+        <div class="parHd2">
+            <span>钼 </span>
+            <b>MOLYBDENUM</b>
+
+            <ul>
+                {eyou:channelartlist typeid='16'}
+                {eyou:channel type="son" row='3'}
+
+                <li><img src="{$field.litpic}" alt=""/>
+                    <div class="cl{$i}">{$field.typename}</div>
+                </li>
+                {/eyou:channel}
+                {/eyou:channelartlist}
+            </ul>
+        </div>
+        <div class="parBd2">
+
+            <div class="slideBox2">
+                <ul>
+                    {eyou:arclist typeid='20' limit='0,4' titlelen='30' infolen='160' orderby='add_time'}
+
+                    <li>
+                        <div class="pic"><a href="{$field.arcurl}" target="_blank"><img src="{$field.litpic}"/></a></div>
+                        <div class="title"><a href="{$field.arcurl}" target="_blank"><b>{$field.title}</b><br/><span>{eyou:lang name='guige' /}：{eyou:field aid='$field.aid' addfields='guige' /}</span></a></div>
+                    </li>
+                    {/eyou:arclist}
+                </ul>
+
+            </div>
+            <!-- slideBox End -->
+
+            <div class="slideBox2">
+
+                <ul>
+                    {eyou:arclist typeid='21' limit='0,4' titlelen='30' infolen='160' orderby='add_time'}
+
+                    <li>
+                        <div class="pic"><a href="{$field.arcurl}" target="_blank"><img src="{$field.litpic}"/></a></div>
+                        <div class="title"><a href="{$field.arcurl}" target="_blank"><b>{$field.title}</b><br/><span>{eyou:lang name='guige' /}：{eyou:field aid='$field.aid' addfields='guige' /}</span></a></div>
+                    </li>
+                    {/eyou:arclist}
+
+                </ul>
+
+            </div>
+            <!-- slideBox End -->
+
+            <div class="slideBox2">
+
+                <ul>
+                    {eyou:arclist typeid='22' limit='0,4' titlelen='30' infolen='160' orderby='add_time'}
+
+                    <li>
+                        <div class="pic"><a href="{$field.arcurl}" target="_blank"><img src="{$field.litpic}"/></a></div>
+                        <div class="title"><a href="{$field.arcurl}" target="_blank"><b>{$field.title}</b><br/><span>{eyou:lang name='guige' /}：{eyou:field aid='$field.aid' addfields='guige' /}</span></a></div>
+                    </li>
+                    {/eyou:arclist}
+                </ul>
+
+            </div>
+            <!-- slideBox End -->
+
+        </div>
+        <!-- parBd End -->
+    </div>
+
+
+    <script type="text/javascript">
+        /*
+         SuperSlide组合注意：
+         1、内外层mainCell、targetCell、prevCell、nextCell等对象不能相同，除非特殊应用；
+         2、注意书写顺序，通常先写内层js调用，再写外层js调用
+         */
+
+        // /* 内层图片滚动切换 */
+        // jQuery(".slideGroup .slideBox").slide({ mainCell:"ul",vis:3,prevCell:".sPrev",nextCell:".sNext",effect:"leftLoop"});
+
+        /* 外层tab切换 */
+        jQuery(".slideGroup").slide({titCell: ".parHd li", mainCell: ".parBd"});
+        jQuery(".slideGroup2").slide({titCell: ".parHd2 li", mainCell: ".parBd2"});
+
+    </script>
+    <!--產品展示end-->
+
+    <!--优势start-->
+    <div class="youshi">
+        <div class="w">
+            {eyou:type typeid='24' addtable='single_content'}{$field.content}{/eyou:type}
+        </div>
+    </div>
+    <!--优势end-->
+
+    <!--新闻动态start-->
+    <div class="news">
+        <div class="news-tit"><b>新闻动态</b><span>NEWS</span></div>
+        <div class="w">
+            <div class="list1">
+                <div class="news-cat">
+                    <div class="b">{eyou:lang name='gsxw' /}</div>
+                    <div class="e"><a href="{eyou:global name='web_basehost' /}/?m=home&c=Lists&a=index&tid=8">MORE+</a></div>
+                </div>
+                <ul>
+                    {eyou:arclist typeid='8' limit='0,6'  titlelen='25' infolen='160' orderby='add_time'}
+
+                    {eyou:if condition='($i == 1)'}
+                    <li><a href="{$field.arcurl}"><img src="{$field.litpic}" width="368px" height="204px" alt=""/></a></li>
+                    {eyou:else /}
+                    <li><a href="{$field.arcurl}">{$field.title}...</a></li>
+                    {/eyou:if}
+                    {/eyou:arclist}
+
+                </ul>
+            </div>
+            <div class="list2">
+                <div class="news-cat">
+                    <div class="b">{eyou:lang name='hydt' /}</div>
+                    <div class="e"><a href="{eyou:global name='web_basehost' /}/?m=home&c=Lists&a=index&tid=9">MORE+</a></div>
+                </div>
+                <ul>
+                    {eyou:arclist typeid='9' limit='0,6'  titlelen='25' infolen='160' orderby='add_time'}
+
+                    {eyou:if condition='($i == 1)'}
+                    <li><a href="{$field.arcurl}"><img src="{$field.litpic}" width="368px" height="204px" alt=""/></a></li>
+                    {eyou:else /}
+                    <li><a href="{$field.arcurl}">{$field.title}...</a></li>
+                    {/eyou:if}
+                    {/eyou:arclist}
+                </ul>
+            </div>
+
+            <div class="list3">
+                <div class="news-cat">
+                    <div class="b">{eyou:lang name='gjsc' /}</div>
+                    <div class="e"><a href="{eyou:global name='web_basehost' /}/?m=home&c=Lists&a=index&tid=25">MORE+</a></div>
+                </div>
+                <ul>
+                    {eyou:arclist typeid='25' limit='0,6'  titlelen='25' infolen='160' orderby='add_time'}
+
+                    {eyou:if condition='($i == 1)'}
+                    <li><a href="{$field.arcurl}"><img src="{$field.litpic}" width="368px" height="204px" alt=""/></a></li>
+                    {eyou:else /}
+                    <li><a href="{$field.arcurl}">{$field.title}...</a></li>
+                    {/eyou:if}
+                    {/eyou:arclist}
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--新闻动态end-->
+
+
+    <div class="clearfix"></div>
+    <!--footer-->
+  {eyou:include file="footer.htm" /}
+  
+</div>
+</div>
+</body>
+</html>

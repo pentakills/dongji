@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<!-- 提交压缩包记得要恢复，浏览时记得删除 -->
+<meta http-equiv="x-ua-compatible" content="ie=Edge,Chrome=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+<title>{$eyou.field.seo_title}</title>
+<meta name="description" content="{$eyou.field.seo_description}"/>
+<meta name="keywords" content="{$eyou.field.seo_keywords}"/>
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+{eyou:static file="skin/css/bootstrap.min.css" /}
+{eyou:static file="skin/css/common.css" /}
+{eyou:static file="skin/css/animate.css" /}
+{eyou:static file="skin/css/css.css" /}
+{eyou:static file="skin/css/media.css" /}
+{eyou:static file="skin/css/foot.css" /}
+<link rel="stylesheet" href="{eyou:global name='web_templets_m' /}/skin/css/style.css" />
+
+{eyou:static file="skin/js/jquery-1.11.3.js" /}
+{eyou:static file="skin/js/slick.min.js" /}
+{eyou:static file="skin/js/common.js" /}
+{eyou:static file="skin/js/wow.min.js" /}
+{eyou:static file="skin/js/jquery.js" /}
+<script type="text/javascript" src="{eyou:global name='web_templets_m' /}/skin/js/jixie.js" ></script>
+<!--[if lt IE 9]>
+{eyou:static file="skin/js/html5shiv.min.js" /}
+{eyou:static file="skin/js/respond.min.js" /}
+{eyou:static file="skin/js/selectivizr-min.js" /}
+<![endif]-->
+
+</head>
+<body>
+	<!-- head -->
+    <div class="head-box">
+      <div class="fh"> <img src="{eyou:global name='web_templets_m' /}/skin/img/fh.png" onClick="javascript:window.history.go(-1)" alt="返回"> </div>
+      <h2>{$eyou.field.typeid|gettoptype=###,'typename'}</h2>
+      <ul class="nva-btn" id="nva-box">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    {eyou:include file="header.htm" /}
+	<!-- head -->
+<div id="wrap_top">
+    <div id="model-body">
+      
+        <div id="quickbar-wrap" class="page-active">
+            <div class="model_wrapper">
+    
+                <div class="model_contant model_leftright">
+                    <!-- 手机内页分类下拉 -->
+                    <div class="model-classify visible-xs">
+                        <div class="model-classify-posnav">{$eyou.field.typeid|gettoptype=###,'typename'} <span
+                                class="model-classify-btn transition">{eyou:lang name='fenlei' /}<i><img
+                                src="{eyou:global name='web_templets_pc' /}/skin/img/icon12.png"></i></span></div>
+                        <div class="model-classify-nav">
+                            <ul class="one">
+                                {eyou:channel type='first' id='field' currentstyle='ez'}
+                                <li class="o_li"><a href="{$field.typeurl}"
+                                                    class="one_a transition {$field.currentstyle}"> {eyou:notempty
+                                    name="$field.children"}<i class="transition"></i>{/eyou:notempty} {$field.typename}</a>
+                                    {eyou:notempty name="$field.children"}
+                                    <ul class="second">
+                                        <li class="e_li"><a class="er_a transition" href="{$field2.typeurl}">{$field2.typename}<i
+                                                class="visible-xs"></i> </a></li>
+                                    </ul>
+                                    {/eyou:notempty}
+                                </li>
+                                {/eyou:channel}
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="model_contant_main" class="container">
+                        <!-- pc内页分类 -->
+                        <div class="model_leftright_l hidden-xs">
+                            <div class="l_posnav">{$eyou.field.typeid|gettoptype=###,'typename'}</div>
+                            <div class="cont_nav">
+                                <ul class="one">
+                                    {eyou:channel type='first' id='field' currentstyle='ez'}
+                                    <li class="o_li"><a href="{$field.typeurl}"
+                                                        class="one_a transition {$field.currentstyle}"> {eyou:notempty
+                                        name="$field.children"}<i class="transition"></i>{/eyou:notempty}<b>
+                                            {$field.typename}</b></a> {eyou:notempty name="$field.children"}
+                                        {eyou:channel name='$field.children' id='field2' currentstyle='ez'}
+                                        <a href="{$field2.typeurl}" class="one_a transition {$field2.currentstyle}">
+                                            {eyou:notempty name="$field2.children"}
+                                            <i class="transition"></i>
+                                            {/eyou:notempty} {$field2.typename}</a>
+                                        {/eyou:channel}
+                                        <ul class="second">
+                                            <li class="e_li"><a class="er_a transition" href="{$field2.typeurl}">{$field2.typename}<i
+                                                    class="visible-xs"></i> </a></li>
+                                        </ul>
+                                        {/eyou:notempty}
+                                    </li>
+                                    {/eyou:channel}
+                                </ul>
+                            </div>
+                            <!-- 左边联系我们-->
+                            <div class="contact_left">
+                                <img src="template/pc/skin/img/dongji/c.jpg" alt=""/>
+                                <ul>
+                                    <li> {eyou:global name="web_attr_5"}</li>
+                                    <li> {eyou:global name="web_attr_1"}</li>
+                                    <li> {eyou:global name="web_attr_6"}</li>
+                                    <li> {eyou:global name="web_attr_7"}</li>
+
+                                </ul>
+                            </div>
+                            <!-- 左边联系我们-->
+                        </div>
+                        <div class="moder_leftright_r">
+                            <div class="r_posnav hidden-xs">
+                                <p>{$eyou.field.typename}</p>
+                                <span>{eyou:lang name='dangqianweizhi' /}：{eyou:lang name='sys1' /}{eyou:position style="crumb" /}</span>
+                            </div>
+                            <div class="model-dectil">
+                                <div class="model-dectil-img model_img_four" autoplay=1>
+                                    <div class="single-item dec_item" id="marquee">
+                                        {eyou:volist name="$eyou.field.image_list"}
+                                        <div>
+                                            <div class="pimg"><img src="{$field.image_url}" alt="{$field.intro}"/></div>
+                                        </div>
+                                        {/eyou:volist}
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function () {
+                                        $("#marquee").slick({
+                                            dots: true,
+                                            infinite: false,
+                                            arrows: false,
+                                            autoplay: true,
+                                            autoplaySpeed: 2000000,
+                                            fade: true,
+                                            cssEase: "linear"
+                                        });
+                                    });
+                                </script>
+                                <div class="model-dectil-title">{$eyou.field.title}</div>
+                                <div class="model-dectil-text">
+                                    {$eyou.field.content}
+                                </div>
+                                <div class="model-dectil-bottom">
+                                    <ul class="model-dectil-chose">
+                                        {eyou:prenext get='pre'}
+                                        <li><a href="{$field.arcurl}" title="{$field.title}"> {eyou:lang name='sys11' /}
+                                            : {$field.title}</a></li>
+                                        {eyou:else /}
+                                        <li><a href="javascript:;">{eyou:lang name='sys11' /}：{eyou:lang name='sys10'
+                                            /}</a></li>
+                                        {/eyou:prenext}
+                                        {eyou:prenext get='next'}
+                                        <li><a href="{$field.arcurl}" title="{$field.title}"> {eyou:lang name='sys12' /}
+                                            : {$field.title}</a></li>
+                                        {eyou:else /}
+                                        <li><a href="javascript:;">{eyou:lang name='sys12' /}：{eyou:lang name='sys10'
+                                            /}</a></li>
+                                        {/eyou:prenext}
+                                    </ul>
+                                    <div class="model-dectil-share hidden-xs"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--footer-->
+                {eyou:include file="footer.htm" /}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

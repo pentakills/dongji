@@ -1,0 +1,52 @@
+<div class="nav">
+    <div class="w">
+        <ul>
+            <li class="{eyou:eq name='$Request.param.m' value='Index'}active{/eyou:eq}"><a href="{eyou:global name='web_cmsurl' /}" title="{eyou:lang name='sys1' /}">{eyou:lang name='sys1' /}</a></li>
+            {eyou:channel type='top' row='8' currentstyle='active'}
+            <li class="{$field.currentstyle}"><a href='{$field.typeurl}'>{$field.typename}</a>
+                {eyou:notempty name='$field.children'}
+                <div class="dropdown">
+                    {eyou:channel name='$field.children' id='field2' row='10'}
+                    <a href="{$field2.typeurl}">{$field2.typename}</a>
+                    {/eyou:channel}
+                </div>
+                {/eyou:notempty}
+            </li>
+            {/eyou:channel}
+        </ul>
+    </div>
+</div>
+<!--banner图开始-->
+<div class="banner">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {eyou:adv pid='1'}
+            <div class="swiper-slide"><a href='{$field.links}' {$field.target}><img src='{$field.litpic}' alt='{$field.title}'/></a></div>
+            {/eyou:adv}
+
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <!--<div class="swiper-button-next"></div>-->
+        <!--<div class="swiper-button-prev"></div>-->
+    </div>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 10000,
+            autoplayDisableOnInteraction: false
+        });
+
+
+    </script>
+</div>
+<!--banner图结束-->

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<!-- 提交压缩包记得要恢复，浏览时记得删除 -->
+<meta http-equiv="x-ua-compatible" content="ie=Edge,Chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+<title>{$eyou.field.keywords}_搜索页_{eyou:global name="web_name" /}</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+{eyou:static file="skin/css/bootstrap.min.css" /}
+{eyou:static file="skin/css/common.css" /}
+{eyou:static file="skin/css/animate.css" /}
+{eyou:static file="skin/css/css.css" /}
+{eyou:static file="skin/css/media.css" /}
+{eyou:static file="skin/css/foot.css" /}
+<link rel="stylesheet" href="{eyou:global name='web_templets_m' /}/skin/css/style.css" />
+
+{eyou:static file="skin/js/jquery-1.11.3.js" /}
+{eyou:static file="skin/js/slick.min.js" /}
+{eyou:static file="skin/js/common.js" /}
+{eyou:static file="skin/js/wow.min.js" /}
+{eyou:static file="skin/js/jquery.js" /}
+<script type="text/javascript" src="{eyou:global name='web_templets_m' /}/skin/js/jixie.js" ></script>
+<!--[if lt IE 9]>
+    {eyou:static file="skin/js/html5shiv.min.js" /}
+    {eyou:static file="skin/js/respond.min.js" /}
+    {eyou:static file="skin/js/selectivizr-min.js" /}
+  <![endif]-->
+
+</head>
+<body>
+	<!-- head -->
+    <div class="head-box">
+      <div class="fh"> <img src="{eyou:global name='web_templets_m' /}/skin/img/fh.png" onClick="javascript:window.history.go(-1)" alt="返回"> </div>
+      <h2>{$eyou.field.typeid|gettoptype=###,'typename'}</h2>
+      <ul class="nva-btn" id="nva-box">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    {eyou:include file="header.htm" /}
+	<!-- head -->
+<div id="wrap_top">
+  <div id="model-body">
+ 
+
+    <div id="quickbar-wrap" class="page-active">
+      <div class="model_wrapper">
+         
+        <div class="model_contant">
+          <div class="model-classify visible-xs">
+            <div class="model-classify-posnav">{$eyou.field.keywords}</div>
+          </div>
+          <div id="model_contant_main" class="moder_search_result container">
+            <div class="model_seach">
+              <div class="model-seachdiv">
+               {eyou:searchform type='default'}
+               <form method="get" action="{$field.action}">
+                 {$field.hidden}
+                  <input type="text" name="keywords" value=""  class="input"  placeholder="{eyou:lang name='sys7' /}"/>
+                  <input type="submit" value="{eyou:lang name='sys7' /}"  class="seabtn"/>
+                </form>
+                {/eyou:searchform} 
+              </div>
+            </div>
+            <div class="model-textlist model-textlist-three textlist-three">
+              <ul>
+               {eyou:list titlelen='60' pagesize='15'}
+                <li><a href="{$field.arcurl}">{$field.title}</a></li>
+               {/eyou:list}
+              </ul>
+                <div class="model_page hidden-xs"> {eyou:pagelist listitem='index,pre,pageno,next,end' listsize='2' /} </div>
+                <!-- 手机页码 -->
+                <div class="model-phone-page visible-xs"> {eyou:pagelist listitem='index,pre,next,end' listsize='2' /} </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--footer--> 
+        {eyou:include file="footer.htm" /} </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

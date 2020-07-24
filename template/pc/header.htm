@@ -1,0 +1,25 @@
+  <div class="top">
+        <div class="w">
+            <div class="top-text"><a href="">{eyou:lang name='hygw' /}</a></div>
+            <div class="languages">
+                {eyou:language type='list'}
+                <img src="{$field.logo}" alt="{$field.title}"/>
+                <a href="{$field.url}">{$field.title}</a>
+                {/eyou:language}
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="tit">
+        <div class="logos"><a href="{eyou:global name='web_cmsurl' /}"><img src="{eyou:global name='web_logo' /}" alt="{eyou:global name='web_name' /}"/></a></div>
+          {eyou:searchform type='default'}
+         <form method="get" action="{$field.action}">
+           {$field.hidden}
+            <input type="text" name="keywords"  class="p" placeholder="{eyou:lang name='sys7' /}"/>
+            <input type="submit" class="t" value=" "/>
+        </form>
+         {/eyou:searchform} 
+    </div>
+
+
+ 

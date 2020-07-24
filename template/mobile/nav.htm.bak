@@ -1,0 +1,85 @@
+<!-- 手机滑开导航 -->
+  <div class="model-leftnav page-prev visible-xs">
+    <h1 class="model-leftnav-top"><span>{eyou:global name='web_attr_1' /}</span></h1>
+    <div class="model-leftnav-main">
+      <ul class="nnav">
+        <li><a href="{eyou:global name='web_cmsurl' /}/" class="ce">网站首页</a></li>
+        {eyou:channel type="top" row="60" id="field"}
+          <li class="yiji">
+            {eyou:notempty name="$field.children"}
+            <dl class="er_icon">
+              <span class="icon1">-</span><span class="icon2">+</span>
+            </dl>
+            {/eyou:notempty} 
+            <a href="{$field.typeurl}" class="ce">{$field.typename}</a> 
+            {eyou:notempty name="$field.children"}
+            <ul class="menu_body">
+              {eyou:channel name="$field.children" row="100" id="field2"}
+              <li class="erji"> 
+               {eyou:notempty name="$field2.children"}
+                <dl class="thr_icon">
+                  <span class="icon1"> - </span> <span class="icon2"> + </span>
+                </dl>
+                {/eyou:notempty} 
+                <a href="{$field2.typeurl}" class="er">{$field2.typename}</a>
+                <ul class="thr_body">
+                  {eyou:channel name="$field2.children" row="100" id="field3"}
+                  <li class="threeji"><a href="{$field3.typeurl}" class="three">{$field3.typename}</a> </li>
+                  {/eyou:channel}
+                </ul>
+              </li>
+              {/eyou:channel}
+            </ul>
+            {/eyou:notempty} 
+            </li>
+          {/eyou:channel}
+      </ul>
+    </div>
+  </div>
+  <div class="opacity2"></div>
+  
+  <!-- 底部导航 -->
+  <div class="model-fixed visible-xs">
+    <ul class="fnavbox">
+      <li id=""class="model-navbtn" ><a href="javascript:void(0)">
+        <p class="iconfont" id="">&#xe603</p>
+        <p class="title" id="">导航</p>
+        </a></li>
+      <li id=""class="" ><a href="tel:{eyou:global name='web_attr_1' /}" data-agl-cvt="2">
+        <p class="iconfont" id="">&#xe602;</p>
+        <p class="title" id="">电话</p>
+        </a></li>
+      <li id=""class="" ><a href="http://wpa.qq.com/msgrd?v=3&uin={eyou:global name='web_attr_2' /}&site=qq&menu=yes">
+        <p class="iconfont" id="">&#xe606;</p>
+        <p class="title" id="">咨询</p>
+        </a></li>
+      <li id=""class="" ><a href="{eyou:global name='web_attr_3' /}">
+        <p class="iconfont" id="">&#xe605;</p>
+        <p class="title" id="">地图</p>
+        </a></li>
+      <li id="search_btn"class="search_btn" ><a href="javascript:void(0)">
+        <p class="iconfont" id="search_btn">&#xe636;</p>
+        <p class="title" id="search_btn">搜索</p>
+        </a></li>
+      <div class="share_box" style="display:hidden">
+        <div class="stop">
+          <div class="quickbar_search searchsousuo" style="display: none;">
+          {eyou:searchform type='default'}
+          <form id="quickbar_form" class="fm" method="get" action="{$field.action}">
+            {$field.hidden} <span class="s_ipt_w">
+            <input type="text" id="quickbar_kw" name="keywords" class="s_ipt" placeholder="请输入搜索关键字">
+            </span><span class="s_btn_wr">
+            <input type="submit" class="s_btn" id="quickbar_submit" value="搜索">
+            </span>
+          </form>
+          {/eyou:searchform} 
+          </div>
+        </div>
+        <p class="quxiao">取消</p>
+      </div>
+      <li id="returntop"class="returntop" ><a href="#wrap_index">
+        <p class="iconfont" id="returntop">&#xe617</p>
+        <p class="title" id="returntop">顶部</p>
+        </a></li>
+    </ul>
+  </div>

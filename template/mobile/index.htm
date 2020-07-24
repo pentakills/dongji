@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<title>{eyou:global name='web_title' /}</title>
+<meta name="description" content="{eyou:global name='web_description' /}"/>
+<meta name="keywords" content="{eyou:global name='web_keywords' /}"/>
+
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_m' /}/skin/css/style.css" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_m' /}/skin/css/swiper.min.css" />
+<script type="text/javascript" src="{eyou:global name='web_templets_m' /}/skin/js/jquery-1.11.3.min.js" ></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_m' /}/skin/js/jixie.js" ></script>
+</head>
+<body>
+<div class="box"> 
+  <!--head-->
+  <div class="head-box">
+  <div class="head-logo"> <a href="{eyou:global name='web_cmsurl' /}" style="font-size:16px; font-weight: 700;color: #fff;position: absolute;top:12px;">{eyou:global name='web_name' /} </a></div>
+  <ul class="nva-btn" id="nva-box">
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+  {eyou:include file="header.htm" /}
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+     {eyou:adv pid='1'}
+       <div class="swiper-slide"><a href="{$field.links}"><img src="{$field.litpic}"></a></div>
+     {/eyou:adv}   
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows --> 
+  </div>
+  <!-- Swiper JS --> 
+  <script src="{eyou:global name='web_templets_m' /}/skin/js/swiper.min.js"></script> 
+  {eyou:channelartlist typeid='3'}
+  <div class="product-box">
+    <div class="bt">
+      <h2>{eyou:field name='typename'/}</h2>
+      <a href="{eyou:field name='typeurl'/}">MORE+</a> </div>
+    <ul class="product-list">
+    {eyou:arclist row='6' titlelen='20'}
+      <li> <a href="{$field.arcurl}"> <img src="{$field.litpic}" alt="{$field.title}"/>
+        <p>{$field.title}</p>
+        </a> </li>
+    {/eyou:arclist} 
+      <div class="clearfix"></div>
+    </ul>
+  </div>
+  {/eyou:channelartlist}    
+  {eyou:channelartlist typeid='6'}
+  <div class="about-box">
+    <div class="about">
+      <div class="about-img"> <img src="{eyou:field name='litpic'/}"> </div>
+      <div class="about-nr">
+        <h2>{eyou:global name='web_name' /}</h2>
+        <p>{eyou:type addtable='single_content'}{$field.content|html_msubstr=###,0,65}...{/eyou:type}</p>
+      </div>
+    </div>
+  </div>
+  {/eyou:channelartlist}   
+  {eyou:channelartlist typeid='14'}
+  <div class="case-box">
+    <div class="bt">
+      <h2>{eyou:field name='typename'/}</h2>
+      <a href="{eyou:field name='typeurl'/}">MORE+</a> </div>
+    <ul class="case-list">
+      {eyou:arclist row='2' titlelen='20'}
+      <li> <a href="{$field.arcurl}">
+        <div class="case-img"> <img src="{$field.litpic}" alt="{$field.title}"/> </div>
+        <p>{$field.title}</p>
+        </a> </li>
+      {/eyou:arclist} 
+      <div class="clearfix"></div>
+    </ul>
+  </div>
+  {/eyou:channelartlist}   
+  {eyou:channelartlist typeid='2'}
+  <div class="box-bg">
+    <div class="news-box">
+      <div class="bt">
+        <h2>{eyou:field name='typename'/}</h2>
+        <a href="{eyou:field name='typeurl'/}">MORE+</a> </div>
+      <ul class="news-list">
+      {eyou:arclist row='3' titlelen='20' infolen='20'}
+        <li> <a href="{$field.arcurl}">
+          <div class="news-img"> <img src="{$field.litpic}" alt="{$field.title}"/> </div>
+          <div class="news-nr">
+            <h2>{$field.title}</h2>
+            <span>{$field.add_time|MyDate='Y-m-d',###}</span>
+            <p>{$field.seo_description}...</p>
+          </div>
+          <div class="clearfix"></div>
+          </a> </li>
+      {/eyou:arclist} 
+      </ul>
+    </div>
+    <div class="foot-bq"> {$global.web_copyright|htmlspecialchars_decode}--SEO技术支持：<a href="http://www.0917bjms.com/" style="color: #fff;">麦思科技</a> &nbsp;&nbsp;{eyou:global name='web_recordnum' /}</div>
+  </div>
+  {/eyou:channelartlist} 
+</div>
+<!--底部--->
+{eyou:include file="footer.htm" /}
+</body>
+<script>
+	var swiper = new Swiper('.swiper-container', {
+		  spaceBetween: 30,
+		  centeredSlides: true,
+		  autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		  },
+		  pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		  },
+   });
+	</script>
+</html>
